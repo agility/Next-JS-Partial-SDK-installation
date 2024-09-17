@@ -1,5 +1,4 @@
 import { draftMode } from "next/headers"
-import LoadingWidget from "components/common/LoadingWidget"
 import PreviewBar from "components/common/PreviewBar"
 import SiteFooter from "components/common/SiteFooter"
 import SiteHeader from "components/common/SiteHeader"
@@ -12,8 +11,6 @@ import "/styles/globals.css"
 
 import { getHeaderContent } from "lib/cms-content/getHeaderContent"
 import { redirect } from "next/navigation"
-import { NextRequest } from "next/server"
-import Script from "next/script"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,7 +60,6 @@ export default async function RootLayout({
           </div>
         </div>
       </body>
-      <Script src="https://unpkg.com/@agility/web-studio-sdk@latest/dist/index.js" />
     </html>
   )
 }

@@ -24,11 +24,10 @@ const PostDetails = async ({ dynamicPageItem }: UnloadedModuleProps) => {
 
   return (
     <>
-      <div className="relative px-8" data-agility-component={contentID}>
+      <div className="relative px-8">
         <div className="max-w-screen-xl mx-auto">
           <div className="h-64 md:h-96  lg:h-[480px] relative overflow-hidden rounded-lg">
             <AgilityPic
-              data-agility-field="image"
               image={post.image}
               alt={post.image.label}
               className="w-full"
@@ -41,28 +40,17 @@ const PostDetails = async ({ dynamicPageItem }: UnloadedModuleProps) => {
             />
           </div>
           <div className="max-w-2xl mx-auto mt-4">
-            <div
-              data-agility-field="category"
-              className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose"
-            >
+            <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
               {category}
             </div>
             <div className="border-b-2 border-primary-500 w-8"></div>
-            <div
-              data-agility-field="date"
-              className="mt-4 uppercase text-gray-600 italic font-semibold text-xs"
-            >
+            <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
               {dateStr}
             </div>
-            <h1
-              data-agility-field="title"
-              className="font-display text-4xl font-bold my-6 text-secondary-500"
-            >
+            <h1 className="font-display text-4xl font-bold my-6 text-secondary-500">
               {post.title}
             </h1>
             <div
-              data-agility-field="content"
-              data-agility-html="true"
               className="prose max-w-full mb-20"
               dangerouslySetInnerHTML={renderHTML(post.content)}
             />
