@@ -11,6 +11,7 @@ import "/styles/globals.css"
 
 import { getHeaderContent } from "lib/cms-content/getHeaderContent"
 import { redirect } from "next/navigation"
+import Script from "next/script"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default async function RootLayout({
             </div>
           </div>
         </div>
+        <Script src="https://unpkg.com/@agility/web-studio-sdk@latest/dist/index.js" />
       </body>
     </html>
   )
